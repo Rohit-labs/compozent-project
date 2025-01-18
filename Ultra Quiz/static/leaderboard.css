@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /*for future changes*/
+    font-family: "poppins", "sans-serif";
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(255, 254, 251);
+    
+}
+
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    padding: 10px 20px;
+    background-color: #1c1e53 ;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;  
+    z-index: 99;
+}
+
+.navbar .anotherpage a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+    margin-left: px;
+    text-decoration: none;
+}
+
+.navbar .anotherpage a::before {
+    content: '' ;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.3s;
+    
+}
+
+.navbar .anotherpage a:hover::before {
+    width: 100%;
+    box-shadow: 40px 0 100px white, -40px 0 100px white;
+}
+
+.login{
+    padding: 1em 2em;
+    border: solid 1px white;
+    border-radius: 10px;
+    /*border :none;*/
+    background-color: #1c1e53;
+    color: white;
+    font-family: "poppins" sans-serif;
+    cursor: pointer;
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center ;
+}
+.login::after {
+    content: '';
+    position: absolute;
+    height: 107%;
+    width: 103%;
+    border-radius: 10px;
+    background-color: white;
+    z-index: -1;
+}
+.login:hover {
+    z-index: 0;
+    color: #1c1e53;
+}
+
+.navbar li {
+    list-style: none;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.tablecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    margin-top: 15px;
+}
+
+#leaderboard::before
+{
+        content: '' ;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+}
+    
+#leaderboard::before {
+        width: 100%;
+        box-shadow: 40px 0 100px white, -40px 0 100px white;
+}
+
+.user-info{
+    color: #fff;
+}
+
+.highlight {
+    background-color: rgb(190, 190, 53); /* Highlight color */
+}
+
+table {
+    margin: 20px 5px 80px 5px;
+    width: 80%;
+    border-collapse: collapse;
+    
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #1c1e53;
+    color: #fff;
+}
+
+/*footer starts*/
+.footer{
+    height: 400px;
+    width: 100%;
+    background-color: #1C1E53;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+.nfirst-box{
+    width: 25rem;
+    font-weight: 600;
+    position: relative;
+    right: 70px;
+}
+.flogo{
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+.fcontact{
+    display: flex;
+    height: 100px;
+    width: 420px;
+    background-color: #FCD980;
+    position: relative;
+    top:87px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.nbox{
+    position: relative;
+    bottom: 60px;
+}
+.nbox h3{
+    padding-bottom: 20px;
+}
+
+.nbox ul{
+    list-style-type: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+.nbox li{
+    padding-bottom: 5px;
+    list-style: none;
+}
+.ftelephone{
+    padding-left: 10px;
+}

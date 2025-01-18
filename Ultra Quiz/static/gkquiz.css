@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /*for future changes*/
+    font-family: "poppins", "sans-serif";
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(255, 254, 251);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100vw;
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#quiz-header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  
+   width: 100%;
+}
+#question-number{
+   font-size: 20px;
+   font-size: 40px;
+}
+
+#timer-container {
+  font-size: 20px;
+  font-size: 40px;
+}
+
+.quiz{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 80%;
+}
+
+.choice-container{
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: white;
+}
+
+.choice-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(86, 165, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.choice-prefix{
+    padding: 1.5rem 2.5rem;
+    background-color: #1c1e53;
+    color: white;
+}
+
+.choice-text{
+    padding:1.5rem;
+    width: 100%;
+}
+
+.choice-text.colorchange{
+    background-color: #a0d3ff;
+    color: white;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    width: 100%;
+    
+}  
+
+#question{
+  margin-top: 10px;
+}
+
+.nav-button {
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    font-size: 25px; /* Font size */
+    padding: 15px 50px; /* Padding for size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin: 0 10px; /* Spacing between buttons */
+  }
+
+  .nav-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+
+  .nav-button:active {
+    background-color: #003d80; /* Even darker blue when clicked */
+    transform: scale(1); /* Reset zoom effect */
+  }
+
+   .finalmarks-container{
+     display: none;
+  } 
+
+  .final-message-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #final-message{
+    color: black;
+    font-size: 80px;
+  }
+
+  #final-message2{
+    color: black;
+    font-size: 50px;
+  }
+
+  .btn-container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

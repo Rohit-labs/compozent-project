@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins","sans-serif"; 
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(255, 254, 251);
+}
+
+.main-box{
+    display: flex;
+    height: 64vh;
+    width: 67.76vw;
+}
+
+.left-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;    
+    position: relative;
+    background-image:url('./images/woman-writing-3228878.png');
+    padding-bottom: 175px;
+    /* background-color: rgba(28, 30, 83, 0.6); */
+}
+
+.left-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 30, 83, 0.6); /* Semi-transparent black */
+    z-index: 1; /* Place the overlay above the image */
+}
+
+.inner-left-box{
+    display: flex;
+    flex-direction: column;
+   margin-bottom: 30px;
+
+}
+
+.motivational-heading{
+    width: 100%;
+    font-size: 42px;
+    font-weight: 600px;
+    padding: 20px;
+    position: relative;
+  z-index: 1;
+    color: #FFFFFF;
+}
+
+.motivaltional-lines{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500px;
+    padding: 20px;
+    position: relative;
+  z-index: 1;
+    color: #FFFFFF;
+}
+
+.right-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #1C1E53;
+}
+
+.inner-right-box{
+    width: 60%;
+    
+}
+
+.login-heading{
+    width: 100%;
+    font-size: 28px;
+    font-weight: 600px;
+    color: #F4F6FC;
+}
+
+.login-motivation{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400px;
+    color: #F4F6FC;
+}
+
+.signuperror{
+   color: red;
+}
+
+.input-box{
+    margin: 15px 0px;
+}
+
+.input-box .input{
+    width: 100%;
+    height:5.93vh;
+    background: transparent;
+    border: 1px solid #F4F6FC;
+    outline: none;
+    border-radius: 8px;
+    padding: 20px 45px 20px 20px;
+    color: #F4F6FC;
+}
+
+.input:focus{
+    background-color: #1C1E53;
+}
+.input-box input::placeholder{
+    color: #F4F6FC;
+}
+
+.remember-me input{
+    font-size: 14px;
+    font-weight: 400px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.remembermetext{
+    color: #F4F6FC;
+}
+
+
+.signup-link{
+    color: #F4F6FC;
+}
+
+.signup-link a{
+    color: #F4F6FC;
+}
+
+.signup-link a:hover{
+    color: #FCD980;
+}
+
+.btn{
+    width: 100%;
+    height: 64px;
+    background-color: #FCD980;
+    color: #282938;
+    font-size: 18px;
+    font-weight: 700px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.btn:hover{
+     background-color: #ebb93c;
+}
+
+.signup-link{
+    display: flex;
+    justify-content: center;
+}

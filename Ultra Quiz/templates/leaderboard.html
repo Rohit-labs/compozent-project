@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="/static/leaderboard.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">ULTRA QUiZ</a> <!--logo placed here-->
+           
+              <div> 
+                  <nav class="navbar">
+                      <ul>
+                        <li class="anotherpage"><a href="{{url_for('home')}}" id="home" >Home</a></li>
+                        <li class="anotherpage"><a href="" id="leaderboard" >Leaderboard</a></li>
+                        {% if user %}
+                        <p class="user-info">User : {{ user[1] }}</p>
+                        {% endif %}
+                        <a href="/logout"><button class="login" id="checkLoginButton">LOG OUT</button></a>
+                     </ul>
+                   </nav>
+              </div>
+    </header>
+    <div class="tablecontainer">
+    <h1>Leaderboard</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in leaderboard_data %}
+                <tr>
+                    <td>{{ player.rank }}</td>
+                    <td>{{ player.name }}</td>
+                    <td>{{ player.email }}</td>
+                    <td>{{ player.points }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% if not leaderboard_data %}
+        <p>No leaderboard data available.</p>
+    {% endif %}
+</div>
+
+    <!--Footer starts-->
+    <footer>
+        <div class="footer">
+            <div class="nfirst-box">
+                <div class="flogo"><h2>[ULTRA QUiZ]</h2></div>
+                <div class="ftext">Welcome to ULTRA QUiZ , Create and challenge! Dive into quizzes or craft your own for others to enjoy—learning has never been this fun!</div>
+                <div class="fcontact">
+                    <div class="femail">
+                        <p>Email</p>
+                        <p>ULTRAQUiZ@website.com</p>
+                    </div>
+                    <div class="ftelephone">
+                        <p>Telephone</p>
+                        <p>+91 xxxxxxxxxx</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fsocial_media nbox">
+                <h3>Social Media</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>LinkedIn</li>
+                    <li>Facebook</li>
+                </ul>
+            </div>
+            <div class="fstudy_resources nbox">
+                <h3>Quick GK Resources</h3>
+                <ul>
+                  <li>National Geographic Kids</li>
+                  <li>GK Today </li>
+                  <li>Fact Monster</li>
+                  <li>Infoplease</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+   <!--Footer ends-->
+</body>
+</html>

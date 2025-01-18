@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins","sans-serif"; 
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(255, 254, 251);
+    font-size: 22px;
+}
+
+.nav-button {
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    font-size: 20px; /* Font size */
+    padding: 15px 30px; /* Padding for size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin: 0 10px; /* Spacing between buttons */
+  }
+  
+  .nav-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  .nav-button:active {
+    background-color: #003d80; /* Even darker blue when clicked */
+    transform: scale(1); /* Reset zoom effect */
+  }

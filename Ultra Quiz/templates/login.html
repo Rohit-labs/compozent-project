@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+    
+    <div class="main-box">
+        <div class="left-box">
+          <div class="inner-left-box">
+            <div class="motivational-heading">Unlock <br>Your Potential</div>
+            <div class="motivaltional-lines">With ULTRA QUiZ,Your journey to engineering excellence begins here.<br> Log in and take the first step.</div>
+          </div>
+          </div>
+
+        <div class="right-box">
+          <div class="inner-right-box">
+            <form action="" method="POST">
+              {{form.hidden_tag()}}
+              <div class="login-heading">Login</div>
+              <div class="login-motivation">Welcome back to your future.</div>
+              
+              {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  <div class="alert alert-danger">
+                    <ul>
+                      {% for message in messages %}
+                        <li>{{ messages}}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endif %}
+              {% endwith %}
+
+              <div class="input-box">
+              
+                {{form.email(id="email",type="email",placeholder="Email", class="input")}}
+              </div>
+              <div class="input-box">
+                
+                {{form.password(id="password",type="password",placeholder="Password", class="input")}}
+              </div>
+              
+              {{ form.submit(class="btn")}}
+              <div class="signup-link">
+                <p>
+                  Don't have an account?
+                  <a href="{{url_for('signup')}}">Sign up</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          </div>
+    </div>
+
+</body>
+</html>

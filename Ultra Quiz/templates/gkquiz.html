@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK QUiZ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/gkquiz.css">
+  
+</head>
+<body>
+ 
+
+
+    <div class="container" id="container">
+
+    
+  
+        <div class="quiz">
+            <div id="quiz-header">
+                <div id="question-info">
+                  <span id="question-number">1/5</span>
+                </div>
+                
+                <div id="timer-container">
+                   <span id="timetext">Time Left:</span>
+                  <span id="timer">01:00</span>
+                </div>
+            </div>
+            <h1 id="question">What is your name?</h1>
+            <br>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1">Choice 1</p>
+            </div>
+             
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2">Choice 2</p>
+            </div>
+
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text" data-number="3">Choice 3</p>
+            </div>
+
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <p class="choice-text" data-number="4">Choice 4</p>
+            </div>
+
+            <div class="btn-container">
+                <button class="nav-button" id="prevbtn">< Prev</button>
+                <button class="nav-button" id="nextbtn">Next ></button>
+                <button class="nav-button" id="submitbtn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="finalmarks-container" id="finalmarks-container">
+        <div class="final-message-box">
+         <h1 id="final-message">hi</h1>
+         <h1 id="final-message2">hi</h1>
+        </div>
+       <br>
+       <div class="btn-container2">
+         <a href="{{url_for('quizinstructions')}}"><button class="nav-button" id="retakebtn">< Retake Quiz</button></a>
+         <a href="{{url_for('home')}}"><button class="nav-button" id="homebtn">Home ></button></a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='gkquiz.js') }}"></script>
+</body>
+</html>

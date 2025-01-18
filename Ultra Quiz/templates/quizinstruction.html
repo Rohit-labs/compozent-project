@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Instructions</title>
+    <link rel="stylesheet" href="/static/quizinstruction.css">
+</head>
+<body>
+<div class="container">    
+ <h1>General Knowledge Quiz</h1>
+ <br>
+ <p>5 questions</p>
+ <br>
+ <p>
+    Instructions:
+    <ul>
+        <li>You can retake the test as many times as you would like.</li>
+        <li>Each quiz has a fixed time limit. Make sure to complete the quiz within the allotted time. Once the timer runs out, your quiz will be automatically submitted.</li>
+        <li>If you run out of time or click the submit button, your answers will be automatically submitted for scoring.</li>
+        <li>For each question, select one answer by clicking on the appropriate option</li>
+        <li>You can change your answer anytime before submitting the quiz. Just click on a different option to update your selection.</li>
+        <li>Once you have answered all the questions, click the "Submit" button to finish the quiz. You will not be able to make any changes after submission.</li>
+        <li>Your score will be based on the number of correct answers. Each correct answer earns you points, and your score will be displayed after submission.</li>
+        <li>Please answer all questions on your own. Using external resources, collaborating with others, or cheating is strictly prohibited.</li>
+    </ul>
+    <br>
+    <div class="butns">
+     <a href="{{url_for('home')}}"><button class="nav-button">< Go to Home</button></a>
+     <a href="{{url_for('GKquiz')}}"><button class="nav-button">Begin Test ></button></a>
+    </div>
+</p>
+</div>
+</body>
+</html>

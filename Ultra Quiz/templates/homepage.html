@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULTRA QUiZ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/homepage.css">
+  
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">ULTRA QUiZ</a> <!--logo placed here-->
+       
+          <div> 
+              <nav class="navbar">
+                  <ul>
+                    <li class="anotherpage"><a href="" id="home" >Home</a></li>
+                    <li class="anotherpage"><a href="{{url_for('leaderboard')}}" >Leaderboard</a></li>
+                    {% if user %}
+                    <p class="user-info">User : {{ user[1] }}</p>
+                    {% endif %}
+                    <a href="/logout"><button class="login" id="checkLoginButton">LOG OUT</button></a>
+                 </ul>
+               </nav>
+          </div>
+         
+
+    </header>
+    <!--Ad box-->
+    <div class="Main-ad-box">
+        <!--left box-->
+        <div class="info-part">
+            <div class="written-part">
+                <div class="motivation-box">
+                    <div class="motivation-lines">Challenge the WORLD</div>
+                    
+                </div>
+                <div class="motivation-lines">with our Quiz!</div>
+                <br>
+                <div class="more-lines">Challenge yourself, test your knowledge,<br> and see how far you've come!</div>
+                <br>
+                <a href="{{url_for('quizinstructions')}}"><button class="start-free-trial-button">Try Quiz <img src="{{ url_for('static', filename='images/right-arrow.png') }}" alt=""></button></a> 
+            </div>
+        </div>
+
+        <!--right box-->
+        <div class="image-part">
+            <img src="{{ url_for('static', filename='images/designerad.png') }}">
+        </div>
+    </div>
+    <!--Ad box ends-->
+
+    <!--what are you preparing for section-->
+    <div class="preparing-section">
+        <div class="text">Recent Quiz's:</div>
+        <div class="box-section1">
+            <div class="box">
+                <a href="{{url_for('quizinstructions')}}">
+                    <div class="one"><h2>1</h2></div>
+                    <div class="jee"><H1>GK Quiz</H1></div>
+                    <div class="jee-content"><p>Unleash your inner genius with this engaging GK quiz! Explore fascinating topics, expand your knowledge.</p></div>
+                </a>
+            </div>
+            
+    </div>
+    
+<!--FAQ starts-->
+<div class="Main-FAQ-box">
+    <div class="FAQ-box">
+        <!--left box-->
+        <div class="FAQHEADINGBOX">
+          <div class="FAQheading">Frequently Asked Questions</div>
+          <div class="FAQmorequestions">For more questions please<br>contact our official gmail ULTRAQUiZ@gamil.com</div>
+        </div>
+            
+        <!--right box-->
+        <div class="FAQQUESTIONSBOX">
+          <div class="faq-questions-list">
+            <div class="list-elements">
+              <div class="question-element-box">
+                <h3 class="question"><span class="number">01</span>Can I retake the quiz?</h3>
+                <h3 class="icon">+</h3>
+              </div>
+              <p class="Answer"> Yes, you can retake the quiz as many times as you want, but please note that your previous scores will be replaced with the new ones.</p>
+              <span class="line"></span>
+            </div>
+          </div>
+        
+          <div class="faq-questions-list">
+            <div class="list-elements">
+              <div class="question-element-box">
+                <h3 class="question"><span class="number">02</span>What is the time limit for the quiz? </h3>
+                <h3 class="icon">+</h3>
+              </div>
+              <p class="Answer">Each quiz has a fixed time limit. The time remaining will be displayed on the quiz page.</p>
+              <span class="line"></span>
+            </div>
+          </div>
+    
+          <div class="faq-questions-list">
+            <div class="list-elements">
+              <div class="question-element-box">
+                <h3 class="question"><span class="number">03</span>How does the leaderboard work?</h3>
+                <h3 class="icon">+</h3>
+              </div>
+              <p class="Answer">The leaderboard ranks users based on their quiz scores.</p>
+              <span class="line"></span>
+            </div>
+          </div>
+    
+          <div class="faq-questions-list">
+            <div class="list-elements">
+              <div class="question-element-box">
+                <h3 class="question"><span class="number">04</span>Can I change my answers after submitting the quiz?</h3>
+                <h3 class="icon">+</h3>
+              </div>
+              <p class="Answer">No, once you submit your quiz, your answers are final. You cannot change them afterward.</p>
+              <span class="line"></span>
+            </div>
+          </div>
+          
+        </div>
+    
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='faq.js') }}"></script>
+
+    <!--Footer starts-->
+    <footer>
+      <div class="footer">
+          <div class="nfirst-box">
+              <div class="flogo"><h2>[ULTRA QUiZ]</h2></div>
+              <div class="ftext">Welcome to ULTRA QUiZ , Create and challenge! Dive into quizzes or craft your own for others to enjoy—learning has never been this fun!</div>
+              <div class="fcontact">
+                  <div class="femail">
+                      <p>Email</p>
+                      <p>ULTRAQUiZ@website.com</p>
+                  </div>
+                  <div class="ftelephone">
+                      <p>Telephone</p>
+                      <p>+91 xxxxxxxxxx</p>
+                  </div>
+              </div>
+          </div>
+          <div class="fsocial_media nbox">
+              <h3>Social Media</h3>
+              <ul>
+                  <li>Instagram</li>
+                  <li>Twitter</li>
+                  <li>LinkedIn</li>
+                  <li>Facebook</li>
+              </ul>
+          </div>
+          <div class="fstudy_resources nbox">
+              <h3>Quick GK Resources</h3>
+              <ul>
+                <li>National Geographic Kids</li>
+                <li>GK Today </li>
+                <li>Fact Monster</li>
+                <li>Infoplease</li>
+              </ul>
+          </div>
+      </div>
+  </footer>
+ <!--Footer ends-->
+
+</body>
+</html>
